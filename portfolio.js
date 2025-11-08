@@ -70,3 +70,6 @@ entries.forEach(entry => {
 }, options);
 
 sections.forEach(section => observer.observe(section));
+function goBack() {
+    window.location.href = "index.html#portfolio"; // redirects back to homepage
+}
