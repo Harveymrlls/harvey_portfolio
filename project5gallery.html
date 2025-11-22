@@ -3,15 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Gallery</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="portfolio.js"></script>
-    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="modal_image.css"/>
 </head>
 <body class="font-sans bg-gray-50 text-gray-800">
     <a href="index.html#portfolio" class="inline-block py-2 px-4 bg-purple-600 text-white rounded-md hover:bg-emerald-700 transition-colors w-60 mx-auto text-center ml-6 mt-4">← Back to My Portfolio</a>
 <h2 class="text-4xl font-bold text-center mb-6">My <span class="text-purple-600">Project Gallery <br>UI/UX Design / Prototyping</span></h2>
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6 px-4 sm:px-8 lg:px-16 mb-12">
+
+    <!-- The Modal -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="modalCaption" class="modal-caption"></div>
+    </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 px-4 sm:px-8 lg:px-16 mb-12">
 
     <div class="bg-white rounded-xl shadow-md p-4 flex flex-col items-center">
         <div class="image-text"><h2 class="text-lg font-semibold text-center mb-4">Designing and Prototyping my Website Portfolio<br>You Can view my Design<br></h2></div>
@@ -19,7 +26,7 @@
          class="text-blue-600 hover:underline mb-4 text-center font-bold">
          Check my Design Here!
         </a>
-        <img src="image/figma/webportfolio.png" alt="image 1" class="w-full h-auto object-contain rounded-lg max-h-[750px]" />
+        <img src="image/figma/webportfolio.png" alt="Designing and Prototyping my Website Portfolio" class="w-full h-auto object-contain rounded-lg max-h-[750px] gallery-image" onclick="openModal(this)" />
     </div>
 
      <div class="bg-white rounded-xl shadow-md p-4 flex flex-col items-center">
@@ -28,11 +35,10 @@
          class="text-blue-600 hover:underline mb-4 text-center font-bold">
          Check my Design Here!
         </a>
-        <img src="image/figma/recacy design.png" alt="image 1" class="w-full h-auto object-contain rounded-lg max-h-[750px]" />
+        <img src="image/figma/recacy design.png" alt="Designing and Prototyping my Recacy Mobile Application" class="w-full h-auto object-contain rounded-lg max-h-[750px] gallery-image" onclick="openModal(this)" />
     </div>
 
-
   </div>
-    
+    <script src="modal_image.js"></script>
 </body>
 </html>

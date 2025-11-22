@@ -61,3 +61,13 @@ h1 {
 .gallery img:hover {
     transform: scale(1.05);
 }
+.small-logo {
+    width: 15px;
+    height: 15px;
+}
+@media (min-width: 640px) {
+    .small-logo {
+        width: 25px;
+        height: 25px;
+    }
+}
